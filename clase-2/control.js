@@ -7,6 +7,7 @@ La forma más sencilla de tomar decisiones
 
 if(condición){
     ~código a ejecutar
+    ~varías líneas de código
 }
 
 si el condición es verdadero, se ejecuta el código interno, de lo contrario, no

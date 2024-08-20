@@ -5,15 +5,23 @@ Crea un algoritmo que le pida al usuario que ingrese un número y luego evalúe 
 número es par o impar. 
 */
 
-/* let number = parseInt(prompt("Ingrese un número"))
-let processedNumber = number%2 // Puede ser 1 o 0 o NaN
-if(isNaN(processedNumber)){
-  alert("Se ingreso algo que no es un número")
-} else if (processedNumber===0){
-  alert("Es par")
+/* let numeroIngresado = prompt("Ingrese un número entero")
+let numeroProcesado = parseInt(numeroIngresado)
+
+while(isNaN(numeroProcesado)){
+  numeroIngresado = prompt("Ingrese un número entero correctamente")
+  numeroProcesado = parseInt(numeroIngresado)
+}
+
+if(numeroProcesado % 2 === 0){
+  alert(`El número ${numeroProcesado} es par`)
 } else {
-  alert("es impar")
+  alert(`El número ${numeroProcesado} es impar`)
 } */
+
+// 5 % 2
+// 5-4 = 1
+// 5 % 2 = 1
 
 
 // Actividad 02:
@@ -22,37 +30,21 @@ Crea un algoritmo que le pida al usuario un número y luego utiliza while para e
 cuántos números son pares y cuantos impares, hasta que el usuario ingrese "salir". 
 */
 
-let ciclo = true
-let cuantosPares = 0
-let cuantosImpares = 0
+let loop = true
 
-while(ciclo){
-  let number = parseInt(prompt("Ingrese un número"))
-  let processedNumber = number%2 // Puede ser 1 o 0 o NaN
-  if(isNaN(processedNumber)){
-    alert("Se ingreso algo que no es un número")
-  } else if (processedNumber===0){
-    alert("Es par")
-    cuantosPares++
-  } else {
-    alert("es impar")
-    cuantosImpares++
+while(loop){
+  let numeroIngresado = prompt("Ingrese un número entero")
+  let numeroProcesado = parseInt(numeroIngresado)
+
+  while(isNaN(numeroProcesado)){
+    numeroIngresado = prompt("Ingrese un número entero correctamente")
+    numeroProcesado = parseInt(numeroIngresado)
   }
-  ciclo = confirm("¿Desea evaluar otro número?")
+
+  if(numeroProcesado % 2 === 0){
+    alert(`El número ${numeroProcesado} es par`)
+  } else {
+    alert(`El número ${numeroProcesado} es impar`)
+  }
+  loop = confirm("¿Desea evaluar otro número?")
 }
-
-alert(`hay un total de ${cuantosPares} números pares y ${cuantosImpares} números impares`)
-// let repe = parseInt(prompt("Cuantos números deseas evaluar?"))
-
-// for(let i=0; i<repe ; i++){
-//   let number = parseInt(prompt("Ingrese un número"))
-//   let 
-//   let processedNumber = number%2 // Puede ser 1 o 0 o NaN
-//   if(isNaN(processedNumber)){
-//     alert("Se ingreso algo que no es un número")
-//   } else if (processedNumber===0){
-//     alert("Es par")
-//   } else {
-//     alert("es impar")
-//   }
-// }

@@ -7,10 +7,11 @@ for (let index = 0; index < cantidad; index) {
   console.log(texto);
 } 
 */
-let cantidad = Number(prompt('INGRESE CANTIDAD DE REPETICIONES'));
-let texto = prompt('INGRESE TEXTO A REPETIR');
 
-for (let index = 1; index <= cantidad; index++) {
+let cantidad = prompt('INGRESE CANTIDAD DE REPETICIONES');
+let texto = prompt('INGRESE TEXTO A REPETIR');
+// index = index + 1 o index+=1
+for (let index = 0; index < cantidad; index++) {
   console.log(texto);
 } 
 
@@ -29,15 +30,10 @@ for (let index = 0; index < lados; index++) {
 } 
 */
 
-let lados = parseInt(prompt('INGRESE CANTIDAD DE LADOS'));
+let lados = prompt('INGRESE CANTIDAD DE LADOS');
 for (let index = 0; index < lados; index++) {
   if (index > 3) {
-    // alert("Tenés más lados que un triagulo")
-
-    // alert("No puede ser un  triángulo")
-
-    // alert("Esa cantidad de lados es ilegal")
-    // break
+    alert("esto ya no es un triangulo que haces")
   }
   alert("lado");
 } 

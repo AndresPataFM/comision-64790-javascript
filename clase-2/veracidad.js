@@ -16,6 +16,7 @@ false //falso
     strings no vacios
     objetos menos document.all (los arrays son objetos)
     Infinity
+    "0" es truthy 
 */
 
 // 🔶 Falsey 🔶
@@ -26,7 +27,7 @@ false //falso
     0
     -0
     0n <--- Esto es un BigInt 0
-    "" <--- String vacio
+    "" <--- String vacio || no es esto " ", tiene un espacio y no está vacío
     document.all <--- objeto documento del DOM
 */
 
