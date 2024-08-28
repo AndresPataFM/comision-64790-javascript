@@ -19,14 +19,25 @@ ________ (sumar());
   let resultado = numero1 + 5;
 
   return resultado;
-}
-console.log(sumar());
+} */
 
-const resultadoSumar = sumar()
-console.log(resultadoSumar) */
+// console.log(sumar());
 
-const sumar = (numero1, numero2) => numero1 + numero2
+
 // flecha indica funcion
 // que no halla llaves después de la flecha indica return implicito
+
+/* const sumar = ()=>{
+  let numero1 = 5;
+  let resultado = numero1 + 5;
+  return resultado;
+} */
+
+// const sumar = ()=> 5 + 5;
+// const sumar = (numero1)=> numero1 + 5;
+
+// const sumar = numero1 => numero1 + 5;
+const sumar = (numero1, numero2) => numero1 + numero2;
+
 console.log(sumar(2, 14))
 console.log(sumar(7, 124))

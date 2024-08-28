@@ -10,13 +10,16 @@
 // Las funciones pueden transmitir datos de su scope
 
 let global = "hola soy global"
+
 { // apodemoslo local 1
     let enScope = 1
     { // local 1a
         let enScope2 = 2
+        transporte = enScope2
         var feo = 25
     }
 }
+
 { // local 2
     let enScope3 = 3
     { // local 2a
@@ -37,6 +40,7 @@ let global = "hola soy global"
     }
     nunca = "Soy una implicita global y mi existencia es un crimen"
 }
+
 // soyFuncion()
 // console.log("feo", feo)
 // console.log("horrible", horrible)

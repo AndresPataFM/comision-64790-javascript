@@ -1,166 +1,160 @@
-/* let dni = ""
-do{
-  dni = prompt ("Ingrese su DNI")
-} while (dni === "" || dni === null)
-// ========
-let nombre = ""
-do{
-  nombre = prompt ("Ingrese su nombre")
-} while (nombre === "" || nombre === null)
-// ========
-let apellido = ""
-do{
-  apellido = prompt ("Ingrese su apellido")
-} while (apellido === "" || apellido === null)
- */
-/* function ingresarDNI(){
-  let dni = ""
-  do{
-    dni = prompt ("Ingrese su DNI")
-  } while (dni === "" || dni === null)
-  alert(`Su DNI es: ${dni}`)
-}
-ingresarDNI() */
-/* 
-function ingresarDato(tipoDato){
-  let dato = ""
-  do{
-    dato = prompt (`Ingrese su ${tipoDato}. Se le pedirá nuevamente que ingrese el dato sí lo deja vacío o apreta cancelar.`)
-  } while (dato === "" || dato === null)
-  alert(`Su ${tipoDato} es: ${dato}`)
-}
-ingresarDato("DNI")
-ingresarDato("nombre")
-ingresarDato("apellido") 
-*/
-/* function ingresarDato(tipoDato){
-  let dato = ""
-  do{
-    dato = prompt (`Ingrese su ${tipoDato}. Se le pedirá nuevamente que ingrese el dato sí lo deja vacío o apreta cancelar.`)
-  } while (dato === "" || dato === null)
-  alert(`Su ${tipoDato} es: ${dato}`)
-  return dato
-}
-
-const dni = ingresarDato("DNI")
-const nombre = ingresarDato("nombre")
-const apellido = ingresarDato("apellido")
-
-alert(`Sus datos son los siguientes: \n DNI: ${dni} \n Nombre: ${nombre} \n Apellido: ${apellido}`) */
-
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// console.log("hola")
-// for(let i=0; i<10; i++){
-//   console.log("hola")
-// }
-/* 
-let numeroUsuario = prompt("Adivine que número elegí, ingrese un número del 1 al 10.");
-let numeroParseado = Number(numeroUsuario);
-let numeroProgramador = 4;
-if(numeroParseado === numeroProgramador){
-  alert("Número correcto")
-} else if(numeroParseado < 1 || numeroParseado>10 || isNaN(numeroParseado)){
-  alert("Ingrese un número válido")
-} else {
-  alert("Número incorrecto")
-}
-*/
-
-// function adivinarNumero(){
-//   let numeroUsuario = prompt("Adivine que número elegí, ingrese un número del 1 al 10.");
-//   let numeroParseado = Number(numeroUsuario);
-//   let numeroProgramador = 4;
-//   if(numeroParseado === numeroProgramador){
-//     alert("Número correcto")
-//   } else if(numeroParseado < 1 || numeroParseado>10 || isNaN(numeroParseado)){
-//     alert("Ingrese un número válido")
-//   } else {
-//     alert("Número incorrecto")
+// function contador(){
+//   let numerito = 0
+//   let loop = true
+//   while(loop){
+//     numerito++
+//     loop = confirm("Bienvenido, usted ha escuchado este saludo "+ numerito+ " veces. Desea Escucharlo nuevamente?")
 //   }
+//   alert("Lo escucho "+numerito+" veces")
 // }
 
-// adivinarNumero()
 
-function restar (primerNumero, segundoNumero){
-  console.log(primerNumero)
-  console.log(segundoNumero)
-  const resta = primerNumero - segundoNumero
-  return resta
+
+// cocinar(){
+//   juntarIngredientes()
+//   prepararIngredientes()
+//   cocinarSarten()
+//   servirPlato()
+// }
+
+function d20(){
+  let numerito = 1+Math.floor(Math.random()*20)
+  return numerito
+}
+function d6(){
+  let numerito = 1+Math.floor(Math.random()*6)
+  return numerito
 }
 
-// console.log(restar(5, 3))
-// console.log(restar(5, "hola", true))
+const tirada = d20()
 
-
-function mostrar(numero, palabra){
-  console.log("Su número es", numero)
-  console.log("Su palabra es", palabra)
-}
-// mostrar(7, "hola")
-// mostrar("hola", 7)
-
-// funciona x hoisting
-// console.log(dividir(8,2)) // Funciona pero es mala práctica
-function dividir(primerNumero=1, segundoNumero=1){
-  console.log(primerNumero)
-  console.log(segundoNumero)
-  return primerNumero / segundoNumero
-  // Esto de aca no funca porque el return frena la ejecución de la función
-  console.log(primerNumero / segundoNumero) 
-  return 
+function tiradaGenerala(){
+  for(let i=0; i<5;i++){
+    console.log(d6())
+  }
 }
 
-// console.log(dividir())
-// console.log(dividir(7))
-// console.log(dividir(8,2))
-// console.log(dividir(,2))
 
-//  Función anonima
-const dividirAnonimo = function(primerNumero=1, segundoNumero=1){
-  console.log(primerNumero)
-  console.log(segundoNumero)
-  return primerNumero / segundoNumero
+function saludar(){
+  console.log("Hola como estan")
+  if(Math.random()>0.5){
+    return
+    // El return le dice a la funcion que pare de trabajar y muestre lo que esta en el return
+  }
+  console.log("Todo bien?")
 }
 
-// console.log(division(4,2))
-// console.log(typeof division)
+// function dx(caras){
+//   return 1+Math.floor(Math.random()*caras)
+// }
 
-// division = 10/5
+// console.log(dx(20))
 
-// console.log(division) 
-// console.log(typeof division)
+// console.log(dx(6))
 
-const dividirFlecha = (primerNumero=1, segundoNumero=1)=>{
-  console.log(primerNumero)
-  console.log(segundoNumero)
-  return primerNumero / segundoNumero
-}
-const dividirFlecha2 = (primerNumero=1, segundoNumero=1)=>{
-  return primerNumero / segundoNumero
+function saludador3000(nombre){
+  alert(`Hola ${nombre} comoe estas. Bienvenido a mi página.`)
 }
 
+// const usuario = prompt("Por favor ingrese su nomrbe")
+
+// saludador3000(usuario)
+
+
+
+
+
+
+// const suma = function (a, b){
+//   return a+b
+// }
+console.log(calculos(1,2,3)) // Funciona gracias a hoisting
+
+function calculos(a,b,c){
+  let sumaTemporal = a+b
+  return sumaTemporal*c
+}
+
+// console.log(suma(3,4))
+// console.log(calculos(2,3,4))
+// console.log(suma(3,4))
+
+// despedir() // al no tener hoisting salta error
+const despedir = ()=>{
+  console.log("chau")
+}
+
+despedir()
+
+
+const suma = (a,b)=> a+b
 // return implicito
-const dividirFlecha3 = (primerNumero=1, segundoNumero=1)=>primerNumero / segundoNumero
 
-// console.log(dividirFlecha3(6/3))
+console.log(suma(7,3))
 
-function saludar (nombre){
-  return `Hola ${nombre}`
+const saludador = nombre =>{
+  console.log(`Hola ${nombre}`)
 }
-console.log(saludar("asd"))
+
+saludador("Juan")
+
+const saludadorVago = nombre => `Hola ${nombre}`
 
 
-const saludarOptimizado = nombre => `Hola ${nombre}`
 
-const saludo = saludarOptimizado("asd")
 
-console.log(saludo)
+
+/* 
+Si tenemos un negocio y todos los meses compramos productos para vender pero por catálogo nos entregan el precio sin IVA, ¿Cómo podríamos agregar el iva a los productos?
+Teniendo la constante IVA = 1.21, imagina una función flecha la cual reciba un valor numérico como parámetro, y que retorne dicho valor con IVA incluido. 
+El IVA debe tomarse de una constante, para que la función sea dinámica. ¿Cómo te imaginas el resultado?
+
+
+*/
+
+/* const IVA = 1.21;
+
+const calcularTotal = precio => precio*IVA
+
+console.log(calcularTotal(10000)) */
+
+
+function calcularTotal (precio, impuesto=1.21){
+  console.log(precio)
+  console.log(impuesto)
+  return precio*impuesto
+}
+
+
+console.log(calcularTotal(10000, 1.11))
+// console.log(calcularTotal(10000, 1.21))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(saludadorVago("David"))
