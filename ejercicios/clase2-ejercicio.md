@@ -5,7 +5,7 @@ Te contrataron para ayudar a automatizar las compra de entradas de cine, para el
 * Precio base del boleto en pesos
   * General 2d: 8400
   * General 3d: 10000
-  * Menores de 13 (inclusive) y mayores de 65  (inclusive): 600
+  * Menores de 13 (inclusive) y mayores de 65  (inclusive): 6000
 * Días de descuento: lunes, martes y miércoles hay un descuento del 50%
 * Si ingresan el código de descuento "PROMO" hay un descuento de 1000$ en cada ticket
 
