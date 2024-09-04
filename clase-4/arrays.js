@@ -141,7 +141,7 @@ console.log('testing5.join("-")', testing5.join("-"))
 console.log('testing5.join("")', testing5.join(""))
 console.log(testing0)
 
-// 🔸 💖Indexof✅ 🔸
+// 🔸 💖indexOf✅ 🔸
 // Busca el indice del PRIMER elemento que sea estrictamente igual (===) al parámetro y retorna el nro del indice de ser enontrado, sino retorna -1. Utliza -1 para ser consistente con el tipo de dato del return. No va a funcionar con elementos que son objetos.
 
 console.log(testing6)

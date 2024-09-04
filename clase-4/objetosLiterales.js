@@ -59,8 +59,8 @@ const objeto3 = {
 // 🔶 Llamar propiedades/métodos 🔶
 // objeto.propiedad
 // objeto.método(parametros de ser necesarios)
-
-console.log(objeto3.saludar());
+console.log(objeto3.saludo)
+console.log(objeto3.restar(5,2));
 
 // 🔸 Ejemplo 🔸
 

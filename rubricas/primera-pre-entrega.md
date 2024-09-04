@@ -11,13 +11,13 @@ Comienza a crear la estructura inicial de tu proyecto integrador. Deberás:
 - Utilizar funciones para realizar esas operaciones.
 - El simulador debe de poder funcionar sin tener que ejecutar funciones en consola.
 - Las interacciones se dan mediante
-* Input: prompt (obligatorio usar 1 prompt) y/o confirm.
-* Output: alert / console.log (al menos 1 de los 2)
+  * Input: prompt (obligatorio usar 1 prompt) y/o confirm.
+  * Output: alert / console.log (al menos 1 de los 2)
 
 ## Prohibido
 * Uso de React, Angular u otro framework de Javascript (cosas como bootstrap para estilos esta bien).
 * Manipulación del DOM. Al no saber todavía las buenas prácticas estos proyectos son muy propensos a aplicar practicas que se penalzian.
-* Entregar un HTML sin Js linkeado
+* Entregar un HTML sin Js linkeado.
 * Tener que invocar funciones en consola para que funcione el simulador, para que el simulador funcione el usuario NUNCA debe de tener que escribir código (si es válido que vea salidas en consola mediante console.log)
 
 ## Criterios de Evaluación
@@ -31,7 +31,7 @@ HTML5. _Mientras no usen etiquetas sin cerrar o pongan elementos fuera del body 
 ### Algoritmos
 _Se utiliza algoritmo condicional, array y con ciclo (IF, bucles for) de manera óptima , reflejando lo aprendido en clase._
 * Se utiliza mínimamente 1 algoritmo condicional (if/if else/else if/switch) de manera óptima, reflejando lo aprendido en clase. _No usar if(true), si se puede if(variable) y que la variable===true debido a algoritmos previos._
-* Se utiliza mínimamente 1 ciclo (for/while/do while) de manera óptima, reflejando lo aprendido en clase. _Idem, while(true) esta penalizado. Similarmente, que l única salida que tenga un ciclo sea un break es mala práctica y no abusar del continue. Ciclos infinitos estan MUY mal._
+* Se utiliza mínimamente 1 ciclo (for/while/do while) de manera óptima, reflejando lo aprendido en clase. _Idem, while(true) esta penalizado. Similarmente, que la única salida que tenga un ciclo sea un break es mala práctica y no abusar del continue. Ciclos infinitos estan MUY mal._
 * Se evalúa el uso de input/output del usuario (ver consignas arriba). _Usen las herramientas mencionadas como correctas, alert yconsole.log para salida y prompt/confirm para entrada. No usen DOM._
 * Se utiliza 1 array de manera adecuada con buenas prácticas. _Que el tipo de dato dentro del array sea consistente y de ser aplicable, como en objetos, con la misma estructura._
 * Se aplican buenas prácticas con variables. _No usan var, aplican const donde sea posible, buena nomenclatura, etc._
@@ -46,3 +46,7 @@ _Los nombres de las funciones son claros y dan a entender que acción realizan. 
 * Si o sí crear 1 función propia que no sea una función suma(a,b){return a+b} que sería más facil que sea una línea de código que función.
 
 ### Extra
+
+* Buenos comentarios de código.
+* Indentación consistente y que muestra relación padre/hijo.
+* No tener errores de consola causado por su js.
