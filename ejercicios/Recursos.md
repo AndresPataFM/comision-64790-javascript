@@ -7,4 +7,4 @@ Los recursos que pongo aca no son una competencia de CoderHouse y proporcionan e
 * javascript.info: [https://javascript.info/](https://javascript.info/)
 * w3schools: [https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1](https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1)
 
-como podrán ver, lamentablemente la mayoría de los recursos con ejercicios están en inglés
+Como podrán ver, lamentablemente la mayoría de los recursos con ejercicios están en inglés
