@@ -14,7 +14,6 @@ class Persona {
 }
 */
 
-// Completa el código de la clase 'Persona'
 class Persona {
   // Completa el constructor con los parámetros 'nombre' y 'edad'
   constructor( nombre, edad) {
@@ -27,6 +26,7 @@ class Persona {
     return `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`;
   }
 }
+
 
 // Crea una instancia de la clase 'Persona' con el nombre 'Juan' y la edad 30
 let persona1 = new Persona('Pedro', 40);

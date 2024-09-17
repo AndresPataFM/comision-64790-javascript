@@ -39,6 +39,6 @@ new Gato("Gato con botas")
 new Gato("Gato con botas")
 new Gato("Gato con botas")
 new Gato("Gato con botas")
-// Gato.maullar()
+Gato.maullar()
 console.log(Gato.contador)
 

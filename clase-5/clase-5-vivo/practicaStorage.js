@@ -1,120 +1,72 @@
-const numero = 123
-
-const numeroJSON = JSON.stringify(numero)
-
-console.log(numeroJSON)
-
-const JSONaNumero = JSON.parse(numeroJSON)
-
-console.log(JSONaNumero)
-
-
-const string = "123"
-
-const stringJSON = JSON.stringify(string)
-
-const JSONstring = JSON.parse(stringJSON)
-
-console.log(JSONstring)
-
-/* const auto = {
-    color: "rojo",
-    anio: 2017,
-    marca: "ferrari",
-    bocina: function(){console.log("sonido de bocina")}
-}
-
-console.log(auto)
-
-const autoJSON = JSON.stringify(auto)
-
-console.log(autoJSON)
-
-const JSONauto = JSON.parse(autoJSON)
-
-console.log(JSONauto)
-
-// Guardo en el storage
-
-localStorage.setItem("autoGuardado", autoJSON)
- */
-// const autoStorage = localStorage.getItem("autoGuardado")
-
-// console.log(autoStorage)
-
-// const autoProcesado = JSON.parse(autoStorage)
-
-// console.log(autoProcesado)
-
-// sessionStorage.setItem("test", "hola")
-
 class Gato {
-    constructor(nombre, edadMeses, genero){
+    constructor(nombre, genero, edad){
         this.nombre = nombre
-        this.edadMeses = edadMeses
-        this.edadAnios = parseInt(edadMeses/12)
         this.genero = genero
+        this.edad = edad
     }
     maullar(){
         console.log("miau")
     }
-    presentar(){
-        console.log(`Hola soy ${this.nombre}, soy un ${this.genero}, tengo ${this.edadMeses} meses.`)
+    // funciona la función flecha pero no es recomendado
+    /* mostrarDatos = ()=>{
+        console.log(this.nombre)
+    } */
+    // haganlo así
+    mostrarDatos(){
+        console.log(this.nombre, this.edad, this.genero)
     }
-    acariciar(numero){
-        console.log(`Acariciaste al gato ${numero} veces`)
-    }
-}
-
-function agregarGatos(nombre, edad, genero){
-    const gato = new Gato( nombre, edad, genero)
-    gatos.push(gato)
-    localStorage.setItem("gatos", JSON.stringify(gatos))
-}
-
-function recuperarDatos(){
-    // busco en el storage los datos
-    const gatosObtenidos = JSON.parse(localStorage.getItem("gatos"))
-    console.log(" Gatos obtenidos", gatosObtenidos)
-    // Si no los encuentro retorno un array vacio
-    if(gatosObtenidos === null){
-        return []
-    } else {
-        //Si los encuentro, los paso por la clase asi le agrego los metodos
-        const nuevosGatos = []
-        for(let i=0; i<gatosObtenidos.length; i++){
-            nuevosGatos.push(new Gato(gatosObtenidos[i].nombre, gatosObtenidos[i].edadMeses, gatosObtenidos[i].genero))
-        }
-        return nuevosGatos
+    cumpleanios(){
+        console.log("🎉")
+        this.edad++
     }
 }
 
-const gatos = recuperarDatos()
+const numerito = 123
+const booleano = true
+const string = "asd"
 
-console.log(gatos)
+const sif = new Gato("Sif", "macho", 0)
+console.log(sif)
 
-/* const ami = new Gato( "Ami", 17, "hembra")
+const aJson = JSON.stringify(sif)
 
-console.log(ami)
+console.log(aJson)
 
-// Para guardar
-// 1 Convertir a json
-// 2 setItem (nombreEnStorage, dato)
+const reconvertido = JSON.parse(aJson)
 
-localStorage.setItem("Ami", JSON.stringify(ami))
+// al hacer JSON => JS con objetos, se los suele apsar por su constructor
 
-// Recuperar de storage
-// buscar en els torage
-// convertir de JSON a JS
-const gatoStorage = JSON.parse(localStorage.getItem("Ami"))
+const reconvertirGato = new Gato(reconvertido.nombre, reconvertido.genero, reconvertido.edad)
 
-console.log(gatoStorage)
+console.log(reconvertido)
+console.log(reconvertirGato)
 
-const gatoRecuperado = new Gato(gatoStorage.nombre, gatoStorage.edadMeses, gatoStorage.genero)
 
-console.log(gatoRecuperado) */
+// localStorage.setItem("numerito", numerito)
+// localStorage.setItem("string", string)
+// localStorage.setItem("booleano", booleano)
+// localStorage.setItem("sif", sif)
 
-/* agregarGatos("Pelusa", 23, "hembra")
-agregarGatos("Mochito", 12, "macho")
-agregarGatos("garfield", 55, "macho")
-agregarGatos("ami", 72, "hembra") */
+function guardarObjeto(clave, objeto){
+    const objJSON = JSON.stringify(objeto)
+    localStorage.setItem(clave, objJSON)
+}
+
+const dato1 = localStorage.getItem("numerito")
+const dato2 = localStorage.getItem("string")
+const dato3 = localStorage.getItem("booleano")
+
+console.log(dato1, dato2, dato3)
+console.log(typeof dato1, typeof dato2, typeof dato3)
+
+// guardarObjeto("Sif", sif)
+
+function conseguirObjeto(clave){
+    const objStorage = localStorage.getItem(clave)
+    const objetoParseado = JSON.parse(objStorage)
+    return objetoParseado
+}
+
+console.log(conseguirObjeto("Sif"))
+
+// sessionStorage.setItem("temporal", 1234) 

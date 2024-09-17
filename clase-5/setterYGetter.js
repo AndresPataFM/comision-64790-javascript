@@ -15,9 +15,10 @@ class Person{
         const noSpaceString = string.replace(/\s/g, '' ) //Esto es una expresion regular
         const isString = typeof string === "string"
         const isntEmpty = noSpaceString !== ""
-        console.log(isntEmpty)
+        // console.log(isntEmpty)
         return isString && isntEmpty
     }
+    // getter, nombre como si fuese propiedad, muchas veces con get adelante
     get firstName(){
         this.#interaction++
         return this.#firstName
@@ -51,7 +52,7 @@ class Person{
     set setAge(years){
         this.#interaction++
         const toInterger = parseInt(years)
-        const isNumber = (typeof years !==number)&&(!isNan(toInterger))
+        const isNumber = (typeof years !=="number")&&(!isNan(toInterger))
         const validNumber = years >= 0 
         const isntInfinite = years !== Infinity
 
@@ -77,8 +78,13 @@ const juan = new Person(20, "Juan", "Lopez")
 console.log(juan)
 // console.log(juan.#firstName)
 console.log(juan.firstName)
+console.log(juan.fullName)
 console.log(juan.interaction)
+
 juan.setFirstName = ""
+juan.setFirstName = "Ramiro"
+
+console.log(juan.firstName)
 
 
 /* 
@@ -91,3 +97,5 @@ juan.setFirstName= "Pedro"
 console.log(juan)
 
 console.log(juan.interaction) */
+
+// getter se usa para acceder a props privadas y/o cuando se quiere hacer logica extra al acceder a una propiedad
