@@ -1,4 +1,5 @@
-// 🟠 Funciones de órden suerior 🟠
+// 🟠 Funciones de órden superior 🟠
+//  High Order Functions
 // Una función de orden superior es una función que puede recibir por parámetro una función o retornar una función
 
 
@@ -22,7 +23,7 @@
 // 📫 significa retorna array
 // 🛑 significa no hay return
 
-
+const test = ["💙", "💜", "💚"]
 // 🔶  ✅forEach() 💖🛑 (rara vez destructivo)🔶
 // "A cada"
 // 🔹 Recorre el array y ejecuta una función por cada elemento.
@@ -43,11 +44,11 @@ for(let i=0; i<array.length; i++){
     consologuear(array[i])
 } 
 */
-/* 
-array.forEach((elemento)=>{
+
+test.forEach((elemento)=>{
     console.log(elemento)
 }) 
-*/
+
 
 // 🔶 ✅❓ find() 💖📧 🔶
 // "Encontrar"

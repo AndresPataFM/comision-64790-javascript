@@ -10,7 +10,7 @@ const numeros = [3, 9, 5, 12, 8, 7];
 // console.log(tieneNumeroPar)
 
 // verdadero pero así esta mejor
-const tieneNumeroPar = numeros.some((num) => num % 2 === 0);
+const tieneNumeroPar = numeros.some(num => num % 2 === 0);
 console.log(tieneNumeroPar)
 
 
@@ -20,7 +20,7 @@ const nombres = ['Ana', 'Juan', 'María', 'Luisa', 'Pedro', 'Pablo'];
 const nombresLargos = nombres.filter((name) => name.length > 5);
 */
 
-const nombres = ['Ana', 'Juan', 'María', 'Luisa', 'Pedro', 'Pablo', "Andres"];
+const nombres = ['Ana', 'Juan', 'María', 'Luisa', 'Pedro', 'Pablo', "Andrés"];
 const nombresLargos = nombres.filter((name) => name.length > 5);
 console.log(nombresLargos)
 
@@ -34,9 +34,12 @@ const celsiusTemps = fahrenheitTemps.map((fahrenheit) => ((fahrenheit - 32) * 5)
 
 */
 const fahrenheitTemps = [32, 68, 86, 104, 212];
+
+// (32°F − 32) × 5/9 = 0°C
 const celsiusTemps = fahrenheitTemps.map((fahrenheit) => ((fahrenheit - 32) * 5) / 9);
 
 console.log(fahrenheitTemps)
 console.log(celsiusTemps)
-
 // correcto
+
+// 

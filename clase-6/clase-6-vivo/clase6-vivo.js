@@ -1,250 +1,150 @@
-function crearDado(caras){
-  return function(){
-    return 1+ Math.floor( Math.random()*caras)
+function dx(lados){
+  return ()=>{
+    return 1+Math.floor(Math.random()*lados)
   }
 }
 
-const dado20caras = crearDado(20)
+const d6 = dx(6)
+const d20 = dx(20)
 
-/* 
-function(){
-  return 1+ Math.floor( Math.random()*20)
-*/
-
-const dado6caras = crearDado(6)
-
-// 6! = 720
-// 6*5*4*3*2*1 = 720
-
-function numFactorial(numero){
-  let total = numero;
-  for(let i = numero-1; i>0; i--){
-    total *= i
+class Dado{
+  constructor(lados){
+    this.lados = lados
   }
-  return total
+  roll(){
+    return 1+Math.floor(Math.random()*this.lados)
+  }
 }
+/* console.log(d6())
+console.log(d6())
+console.log(d6())
+console.log(d6())
+console.log(d6())
+console.log(d6())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+console.log(d20())
+ */
 
-/* console.log(numFactorial(6))
-console.log(numFactorial(7)) */
+// !6 = 6*5*4*3*2*1
 
 const factorial = (nro) =>{
+  console.log(nro)
   if(nro <= 1){
     return 1;
   }
   return nro * factorial(nro-1);
 }
 
-/* console.log(factorial(6))
-console.log(factorial(7)) */
+// console.log(factorial(6))
 
-// parametro
+const numeritos = [12,34,553,123,5,7.22]
 
-const arrayNombres = ["Andrés", "Diana", "Juan", "Matilda"]
-
-function trabajarArray(array, funcionTrabajo){
-  for(let i=0; i<array.length; i++){
-    funcionTrabajo(array[i])
+function iterarNumeritos(funcionParametro){
+  for(let i=0; i<numeritos.length; i++){
+    funcionParametro(numeritos[i])
   }
 }
 
-// sin ()
-trabajarArray(arrayNombres, console.log)
-
-function saludar(nombre){
-  console.log("Hola "+nombre)
+function mostrarNumero(nro){
+  console.log(`El número encontrado es ${nro}`)
+  if(nro%2===0){
+    console.log("Es par")
+  } else if(nro%2===1) {
+    console.log("Es impar")
+  } else {
+    console.log("Es un flotante")
+  }
 }
 
-trabajarArray(arrayNombres, saludar)
+iterarNumeritos(mostrarNumero)
 
-trabajarArray(arrayNombres, function(elemento){console.log(elemento.length, elemento)})
-trabajarArray(arrayNombres, (elemento)=>{console.log(elemento.length, elemento)})
-
-// array.metodo(funcionPorReferencia)
-
-trabajarArray(arrayNombres, console.log)
-
-arrayNombres.forEach((elemento)=>{console.log(elemento)})
-arrayNombres.forEach((elemento)=>{console.log("Hola "+elemento)})
-
-let nombres = ""
-
-arrayNombres.forEach(function(elemento){
-  nombres += elemento+ ", "
-})
-
-console.log(nombres)
-
-const productos = [
-  {nombre:"pera", precio:100, stock:45},
-  {nombre:"manzana", precio:90, stock:4},
-  {nombre:"manzana", precio:150, stock:75},
-  {nombre:"frutilla", precio:150, stock:25},
-  {nombre:"banana", precio:120, stock:0},
-  {nombre:"lechuga", precio:70, stock:35},
+const prodList = [
+  {name:"Antipulgas Gato", id:"001", type:"Medicinal", price:450, stock:"32", description:"Antipulgas felino Frontline Plus",},
+  {name:"Antipulgas Perro", id:"002", type:"Medicinal", price:450, stock:"28", description:"Antipulgas Canino Frontline Plus",},
+  {name:"Antiparasitario", id:"003", type:"Medicinal", price:370, stock:"15", description:"Antiparasitario interno Oral Paraqueños",},
+  {name:"Alimento Gato Joven", id:"004", type:"Medicinal", price:4530, stock:"18", description:"Alimento para gatos Kitten de Royal Canin",},
+  {name:"Alimento Gato Adulto", id:"005", type:"Alimento", price:3900, stock:"27", description:"Alimento para gatos adultos Royal Canin Active Life",},
+  {name:"Alimento Gato Edad Avanzada", id:"006", type:"Alimento", price:4620, stock:"15", description:"Alimento para gatos de edad avanzada Royal Canin Mature Consult Stage 1",},
+  {name:"Alimento Perro Joven", id:"007", type:"Alimento", price:4450, stock:"22", description:"Alimento para perros jóvenes de tamaño mediano Royal Canin Puppy Medium.",},
+  {name:"Alimento Perro Adulto", id:"008", type:"Alimento", price:3780, stock:"24", description:"Alimento para perros adultos de tamaño mediano Royal Canin Adult Medium.",},
+  {name:"Alimento Perro Edad Avanzada", id:"009", type:"Alimento", price:4370, stock:"11", description:"Alimento para perros de edad avanzada de tamaño mediano Royal Canin Adgeing",},
+  {name:"Juguete de Ratón", id:"010", type:"Juguete", price:170, stock:"10", description:"Un juguete de ratón de plastico y tela hipoalergénicos",},
+  {name:"Hueso Comestible", id:"011", type:"Alimento", price:450, stock:"0", description:"12(Doce) unidades de huesos comestibles de cuero para perros",},
+  {name:"Pelota", id:"012", type:"Juguete", price:210, stock:"9", description:"Pelota plástica hipoalergénica chillona de mascotas (díametro de 12 cm)",},
 ]
 
-const menor100 = productos.some((elemento)=>{
-  return elemento.precio <= 60
+const encontrar = prodList.find(function(elemento){
+  const verificar = elemento.id === "007"
+  return verificar
 })
 
-const reponer = productos.some((producto)=>producto.stock<=0)
-
-console.log(reponer)
-
-const busqueda = productos.find((producto)=>{
-  return producto.nombre === ""
+const verificarStock = prodList.filter((e,i)=>{
+  console.log(i)
+  return Number(e.price) <= 450
 })
 
-function encontrarProducto(nombre){
-  const prodEncontrado = productos.find((producto)=>{
-    return producto.nombre === nombre.toLowerCase()
-  })
-  if(prodEncontrado){
-    console.log("Aca esta el producto:", prodEncontrado)
-  } else {
-    console.log(`Lo lamento, no poseemos ${nombre}`)
-  }
-}
+console.log(encontrar)
 
-encontrarProducto("manzana")
-// encontrarProducto("palta")
-// encontrarProducto("FruTilla")
+console.table(verificarStock)
 
-function hacerListaProductos(listaProductos){
-  let lista = ""
-  listaProductos.forEach(prod=>{lista += prod.nombre + "; " })
-  return lista
-}
+console.log(numeritos.some((ele)=>{
+  return ele === 12
+}))
 
-function encontrarVariosProductos(precio){
-  const productosEncontrados = productos.filter((elemento)=>{
-    return elemento.precio <= precio
-  })
-  console.log(`Los productos menores o iguales a $${precio} son: `, hacerListaProductos(productosEncontrados))
-}
+console.log(prodList.some((ele)=>{
+  return ele.stock === "0"
+}))
 
-encontrarVariosProductos(120)
 
-const ajusteProdInflacion = productos.map(producto =>{
-  // romper referencia
-  const nuevoProducto = JSON.parse(JSON.stringify(producto))
-  nuevoProducto.precio *= 1.25
-  return nuevoProducto
-})
-console.log(productos)
-console.log(ajusteProdInflacion)
-
-const numeritos = [1,2,3,4]
-
-const nuevosNumeritos = numeritos.map(elemento=>elemento*2)
+const numeritosLaVenganza = numeritos.map(e=>e*2)
 
 console.log(numeritos)
-console.log(nuevosNumeritos)
+console.log(numeritosLaVenganza)
 
-const arrayPrueba = productos.map(e=>e)
+const prodinflacion = prodList.map(producto=>{
+  const prodTemp = JSON.parse(JSON.stringify(producto))
+  prodTemp.price *= 1.1
+  prodTemp.price = prodTemp.price.toFixed(2)
+  return prodTemp
+})
 
-const carrito = []
+console.table(prodinflacion)
+console.table(prodList)
 
-class elementoCarrito{
-  constructor(nombre, precio, cantidad){
-    this.nombre = nombre
-    this.precio = precio
-    this.cantidad = cantidad
-  }
-}
+const canasta = [{...prodList[1], quantity: 7},{...prodList[3], quantity: 3},{...prodList[5], quantity: 27},{...prodList[11], quantity: 2}]
 
-function agregarCarrito(prod, cantidad){
-  const eleCarrito = new elementoCarrito(prod.nombre, prod.precio, cantidad)
-  carrito.push(eleCarrito)
-}
 
-agregarCarrito(productos[0],2)
-agregarCarrito(productos[1],3)
-agregarCarrito(productos[3],1)
-agregarCarrito(productos[4],7)
+const descuentos = 1000;
 
-console.log(carrito)
+const total = canasta.reduce((acumulador, elemento)=>{
+  return acumulador += (elemento.price * elemento.quantity)
+}, -descuentos)
 
-const total = carrito.reduce((total, eleCarrito)=>{
-  return total + eleCarrito.precio * eleCarrito.cantidad
-}, 0)
+console.table(canasta)
 console.log(total)
 
-const listaCarrito = carrito.reduce(function(lista, productoCarrito){
-  return lista + `${productoCarrito.nombre} - cantidad: ${productoCarrito.cantidad} p/u: $${productoCarrito.precio}||subtotal: $${productoCarrito.cantidad*productoCarrito.precio}; `
-}, "Productos en carrito: ")
-
-console.log(listaCarrito)
-
-
-console.log(productos)
-
-// ordenar por precio
-productos.sort((primerProducto, segundoProducto)=>{
-  return primerProducto.precio - segundoProducto.precio
-})
-
-console.log(productos)
-
-/* 
-array.sort((ele1, ele2)=>{
-  let criterio = comparacion de ambos elementos propia 
-  if(criterio){
-  // cambiar orden
+prodList.sort(function(prod1,prod2){
+  if(prod1.price<prod2.price){
+    return -1
+  } else if(prod1.price>prod2.price){
     return 1
   } else {
-  // mantener orden
-    return -1
+    return 0
   }
 })
-*/
 
-// ==================
+console.table(prodList)
 
-// verde
-
-const hamburguesas = []
-
-class hamburguesa {
-  constructor(nombre, precio, ingredientes, nroCombo){
-    this.nombre=nombre
-    this.precio=precio
-    this.ingredientes=ingredientes
-    this.nroCombo=nroCombo
-  }
-}
-
-function agregarHamburguesa(nombre, precio, ingredientes, nroCombo){
-  precio = precio.toFixed(2)
-  hamburguesas.push(new hamburguesa(nombre, precio, ingredientes, nroCombo))
-}
-
-// azul
-agregarHamburguesa("Krusty Burger", 150.00, ['Carne', 'Queso'], 1)
-agregarHamburguesa("Krusty Burger Doble", 225.00, ['Carne', 'Queso', 'Panceta'], 2)
-agregarHamburguesa("Krusty Pollo", 150.00, ['Pollo', 'Queso'], 3)
-agregarHamburguesa("Krusty Mega balde de Pollo", 140.00, ['Pollo', 'Queso','Aderezo'], 4)
-agregarHamburguesa("Super Krusty", 150.00, ['Carne', 'Queso', 'huevo'], 5)
-agregarHamburguesa("Super Krusty Doble", 180.00, ['Carne', 'Queso', 'huevo'], 6)
-agregarHamburguesa("Super Krusty Triple", 205.00, ['Carne', 'Queso', 'huevo'], 7)
-agregarHamburguesa("Krusty Vegan", 125.00, ['Espinaca', 'Soja'], 8)
-
-console.log(hamburguesas)
-
-hamburguesas.sort((primeraHamburguesa, segundaHamburguesa)=>{
-  return primeraHamburguesa.precio - segundaHamburguesa.precio
+prodList.forEach((prod, index)=>{
+  console.log(index)
+  console.log(prod.name)
 })
-
-
-console.table(hamburguesas)
-
-// amarillo
-
-const resultadoaumento = hamburguesas.map((elemento)=>{
-  const nuevoEle = JSON.parse(JSON.stringify(elemento))
-  nuevoEle.precio = parseFloat(nuevoEle.precio)* 1.11
-  nuevoEle.precio = nuevoEle.precio.toFixed(2)
-  return nuevoEle
-})
-
-console.table(resultadoaumento)
