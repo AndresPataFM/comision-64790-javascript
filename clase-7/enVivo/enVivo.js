@@ -26,7 +26,7 @@ const encontrame = document.getElementById("encontrame")
 // // 🔹 document.getElementsByClassName 🔹
 // // array vivo => Nunca lo modifiquen mientras lo recorren
 // // array.filter
-// const rojos = document.getElementsByClassName("rojo")
+const rojos = document.getElementsByClassName("rojo")
 // console.log(rojos)
 
 // // puede buscar combinación de clases
@@ -34,25 +34,31 @@ const encontrame = document.getElementById("encontrame")
 // console.log(rojosCursivos)
 
 // // // 🔹 document.getElementsByTagName 🔹
-// const divs = document.getElementsByTagName("div")
-// // console.dir(divs)
+const divs = document.getElementsByTagName("div")
+// console.dir(divs)
 
 // // // 🔹 document.querySelector 🔹
 // // como find, devuelve el primero que cumpla
 // const queryRojo = document.querySelector(".rojo")
 // // sin espacios
-// // const queryRojo = document.querySelector(".rojo.verde")
+// const queryRojo = document.querySelector(".rojo.verde")
+const queryRojo = document.querySelector(".rojo.cursiva")
 // console.log(queryRojo)
 
 // const queryId = document.querySelector("#encontrame")
 // console.log(queryId)
 
 // // // 🔹 document.querySelectorAll 🔹
-// const queryRojos = document.querySelectorAll("ul")
-// console.log(queryRojos)
+const queryRojos = document.querySelectorAll("ul")
+console.log(queryRojos)
 
 // // 🔶 Modificar Nodos 🔶
 console.dir(encontrame)
+console.dir(encontrame.id)
+console.dir(encontrame.className)
+console.dir(encontrame.classList)
+// encontrame.className = "cursiva carta rojo"
+
 encontrame.innerHTML = `
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Collage_of_Six_Cats-02.jpg/250px-Collage_of_Six_Cats-02.jpg" />
 <ol>
@@ -63,26 +69,26 @@ encontrame.innerHTML = `
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolorem sapiente iure laboriosam, omnis sed aspernatur hic architecto quae cupiditate adipisci incidunt nobis delectus voluptates dignissimos tempore deleniti ipsa quam.</p>
 `
 
-encontrame.classList.toggle("verde")
-encontrame.classList.toggle("verde")
-encontrame.classList.toggle("verde")
+// encontrame.classList.toggle("verde")
+// encontrame.classList.toggle("verde")
+// encontrame.classList.toggle("verde")
 
 
 function abrirCerrarMenu(){
     const menu = document.querySelector("#menu")
     menu.classList.toggle("esconder")
 }
-
+/* 
 const textito = document.getElementById("textito")
 textito.innerText = "hola soy textito"
 // const trabajo = document.getElementById("trabajo")
 
 trabajo.innerText = "<div>BIENVENIDO A MI PÁGINA</div>"
-// trabajo.innerHTML = "<div>BIENVENIDO A MI PÁGINA</div>"
+// trabajo.innerHTML = "<div>BIENVENIDO A MI PÁGINA</div>" */
 
-const title = document.querySelector("title")
+/* const title = document.querySelector("title")
 console.log(title)
-title.innerText = "JS clase 7"
+title.innerText = "JS clase 7" */
 
 // // 🔶 Crear Nodos 🔶
 const listaDeberes = document.getElementById("listaDeberes")
@@ -91,22 +97,30 @@ const listaDeberes = document.getElementById("listaDeberes")
 // metodo bruto
 const deberes = ["Terminar el código", "Hacer correcciones", "Preparar la próxima clase", "dormir"]
 
-let deberesAgregar = ""
+/* const agregarDeberes = ()=>{
+    listaDeberes.innerHTML = ""
+    deberes.forEach(deber=>{
+        listaDeberes.innerHTML += `<li>${deber}</li>`
+    })
+} */
 
-// deberes.forEach(element => {
-//     deberesAgregar += `<li>${element}</li>`
-// });
-// console.log(deberesAgregar)
-// listaDeberes.innerHTML=deberesAgregar
+/* agregarDeberes()
+agregarDeberes()
+agregarDeberes() */
 
-deberes.forEach((e)=>{
-    const li = document.createElement("li")
-    li.innerText = e
-    listaDeberes.appendChild(li)
-})
+const agregarDeberes = ()=>{
+    listaDeberes.innerHTML = ""
+    deberes.forEach((deber, index)=>{
+        const li = document.createElement("li")
+        console.log(li)
+        li.innerText = deber
+        li.id = `deber-${index}`
+        listaDeberes.appendChild(li)
+    })
+}
 
 
-
+/* 
 const header = document.createElement("header")
 header.innerHTML = `
 <h1> Página de Prueba </h1>
@@ -119,7 +133,7 @@ header.innerHTML = `
 </nav>
 `
 
-document.body.insertBefore(header, document.body.children[0])
+document.body.insertBefore(header, document.body.children[0]) */
 
 // let numeros = [1,2,3]
 
@@ -155,3 +169,22 @@ let prod = {a:1, b:2}
 // gato.nombre = "Pepe"
 // console.log(gato)
 
+/* encontrame.onclick = ()=>{
+    alert("Que tocas")
+}
+
+
+encontrame.onclick = ()=>{
+    alert("Dije que no me toques")
+} */
+
+/* encontrame.addEventListener("click", ()=>{
+    alert("Que tocas")
+})
+encontrame.addEventListener("click", ()=>{
+    alert("Dije que no me toques")
+}) */
+
+const btnDeberes = document.querySelector("#btnDeberes")
+
+btnDeberes.addEventListener("click", agregarDeberes)

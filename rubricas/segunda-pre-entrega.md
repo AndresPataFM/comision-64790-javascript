@@ -1,4 +1,4 @@
-# Primera Pre-Entrega
+# Segunda Pre-Entrega
 
 ## Objetivos Generales
 - Codificar la funcionalidad inicial del simulador. 
@@ -8,7 +8,7 @@
 - Capturar la interacción del DOM a través de eventos.
 - Guardar y recuperar información de localstorage tales como objetos, arrays de objetos
 - Crear funciones y/o métodos para realizar operaciones como crear objetos productos, renderizar objetos en el DOM.
-- Efectuar una salida, que es el resultado de los datos procesados en el DOM o por alert().
+- Efectuar una salida, que es el resultado de los datos procesados en el DOM.
 
 Se avanza en el proyecto implementando DOM y objetos. Deberás:
 - Tener bien linkeado el Js según lo indicado en la primera entrega.
@@ -27,13 +27,15 @@ Se avanza en el proyecto implementando DOM y objetos. Deberás:
 ### Funcionalidad
 _Se simula un flujo de trabajo en términos de entrada,proceso y salida. La funcionalidad  es apropiada al contexto del simulador._
 * Tiene que ser un proceso COMPLETO (ej: si es un e-commerce, se tiene que poder finalizar la compra)
+* No tener Errores en consola.
 
 ### Interactividad
 _Se capturan una o más entradas ingresadas por el usuario con prompt(). Se efectúan una o más salidas con alert() o console.log(). Las salidas son coherentes en relación a los datos ingresados._
 * Uso correcto del DOM
   * NO SE UTILIZAN EVENTOS MEDIANTE ATRIBUTO HTML SEA DESDE EL LADO DEL HTML O DEL JS
-* Se penaliza el uso de: alert, rpompt, confirm, console.log/table (esta perfecto usar console para testear pero nunca tiene que estar en la versión entregada)
+* Se penaliza el uso de: alert, prompt, confirm, console.log/table (esta perfecto usar console para testear pero nunca tiene que estar en la versión entregada)
   * console.warn para cosas específicas de programador está bien.
+* utilizar minimamente 1 evento.
 
 ### Escalabilidad
 _Se declaran funciones con parámetros para definir instrucciones con una tarea específica. Se emplean arrays para agrupar valores relacionados. Se definen objetos con propiedades y métodos relevantes al contexto._
@@ -41,6 +43,7 @@ Uso de:
 * arrays (con sus métodos)
 * objetos (preferiblemente a partir de clases con propiedades y métodos coherentes)
 * funciones propias (con parámetros que son más reutilizables)
+
 Opcional pero se considera positivamente:
 * métodos de objetos
 * clases

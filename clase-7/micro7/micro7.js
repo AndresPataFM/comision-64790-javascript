@@ -1,12 +1,12 @@
 /* 
 Find the Bug
 function cargarDOM() {
-const titulo = document.querySelector("titulo")
-const listado = document.querySelector(".listado")
-titulo.innerText = "www.mandafruta.com"
-frutas.forEach(fruta => {
-listado.innerHTML += '<li>{fruta}</li>`
-})
+  const titulo = document.querySelector("titulo")
+  const listado = document.querySelector(".listado")
+  titulo.innerText = "www.mandafruta.com"
+  frutas.forEach(fruta => {
+    listado.innerHTML += '<li>{fruta}</li>`
+  })
 }
 
 Preguntas guía
@@ -16,3 +16,14 @@ Preguntas guía
 ¿Cómo harías para lograr que el código se ejecute con éxito?
 
 */
+
+function cargarDOM() {
+  const titulo = document.querySelector("#titulo")
+  const listado = document.querySelector("#listado")
+  titulo.innerText = "www.mandafruta.com"
+  frutas.forEach(fruta => {
+    listado.innerHTML += `<li>${fruta}</li>`
+  })
+}
+
+cargarDOM()
