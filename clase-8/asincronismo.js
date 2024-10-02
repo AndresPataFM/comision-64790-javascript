@@ -214,9 +214,9 @@ async function getData(url = "") {
     });
     return response.json(); // parsea json
 }
-getData(mockapiURL).then((data) => {
-    console.log(data);
-});
+// getData(mockapiURL).then((data) => {
+//     console.log(data);
+// });
 
 
 // DDOS casero
@@ -253,9 +253,9 @@ async function deleteData(url = "", id) {
     return response.json(); // parsea json
 }
 // El id Cambia
-// deleteData(mockapiURL, 1).then((data) => {
-//     console.log(data);
-// }); 
+deleteData(mockapiURL, 2).then((data) => {
+    console.log(data);
+}); 
 
 
 

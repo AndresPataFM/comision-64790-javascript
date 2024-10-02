@@ -6,6 +6,53 @@
 🔸 Utiliza para recorrer los productos el método forEach() del array productos.
 */
 
+const productos = []
+const lista = document.querySelector("#listaProd")
+const error = document.getElementById("error")
+
+async function conseguirProductos(){
+    lista.innerHTML = ""
+    try {
+        const datosJSON = await fetch("./productos.json")
+        const datos = await datosJSON.json()
+        const otrosJSON = await fetch("./productos2.json")
+        const otrosDatos = await otrosJSON.json()
+        // console.log(datos)
+        datos.forEach(element => {
+            productos.push(element)
+        });
+        otrosDatos.forEach(element => {
+            productos.push(element)
+        });
+        // prod
+        productos.forEach(producto=>{
+            const li = document.createElement("li")
+            li.innerText = `${producto.nombre} ($${producto.precio})`
+            lista.appendChild(li)
+        })
+    } catch (error) {
+        error.innerText = error
+        console.warn(error)
+    }
+}
+
+conseguirProductos()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* const lista = document.querySelector("#listaProd")
