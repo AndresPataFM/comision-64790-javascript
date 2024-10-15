@@ -44,11 +44,11 @@ _Se capturan entradas empleando inputs y eventos adecuados. Las salidas son cohe
 * Utilizar minimamente 1 evento.
 * Código asincrónico realiza 1 modificación al DOM
 * Se utiliza una librería externa
- * Si no es una de las 3 enseñadas (sweet alert, toastify y luxon) en clase tienen que poner la versión y link a la documentación en el readme.
- * Bootstrap no se considera válido para este criterio.
+  * Si no es una de las 3 enseñadas (sweet alert, toastify y luxon) en clase tienen que poner la versión y link a la documentación en el readme.
+  * Bootstrap no se considera válido para este criterio.
 
 ### Escalabilidad
-_SSe declaran funciones con parámetros para definir instrucciones con una tarea específica.Se definen objetos con propiedades y métodos relevantes al contexto. Se emplean arrays para agrupar valores y objetos de forma dinámica. El recorrido de las colecciones es óptimo._
+_Se declaran funciones con parámetros para definir instrucciones con una tarea específica.Se definen objetos con propiedades y métodos relevantes al contexto. Se emplean arrays para agrupar valores y objetos de forma dinámica. El recorrido de las colecciones es óptimo._
 Uso de:
 * arrays (con sus métodos)
 * objetos (preferiblemente a partir de clases con propiedades y métodos coherentes)
@@ -84,16 +84,14 @@ _Los nombres de variables. funciones y objetos son significativos para el contex
 
 * Consideren crear un README.md que describa al proyecto y las herramientas utilizadas.
 * Consideren utilizar git/github.
-* Si se realiza un fe
+* Si se realiza un fetch adecuadamente.
 
 ## Calificación
 
 Cada criterio puede tener el aspecto alcanzado de:
-* Realizado (20 pt)
-* Incompleto (10 pt)
-* No Realizado (0 pt)
+* Óptimo 2pt
+* Correcto 1pt
+* Bajo 0.5pt
+* Nulo 0pt
 
-En total se obtiene:
-* Óptimo (80pt-100pt)
-* Correcto (51pt-79pt)
-* Bajo (0pt-50pt)
+Se aprueba con 7, si se llega a sacar menos de 7, tienen una chance de re-entrega, tiempo dado por la plataforma y como nota máxima la corrección llegan a 7.

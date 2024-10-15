@@ -6,7 +6,7 @@
 // document.createElement("div")
 
 
-// const fs = require("node:fs")
+const fs = require("node:fs")
 
 // crear
 // fs.writeFileSync("ejemplo.txt", "Hola, me crearon con node.")
