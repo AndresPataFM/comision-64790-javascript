@@ -1,4 +1,4 @@
-# Segunda Pre-Entrega
+# Entrega Final
 
 ## Objetivos Generales
 Presentarás la página web interactiva en JavaScript que vienes trabajando a lo largo del curso. La misma debe simular distintos procesos. Un “simulador” es un programa que soluciona ciertas tareas, y proporciona al usuario información de valor, de forma coherente y prolija. Utilizarás FETCH y JSON para obtener datos y diversas herramientas de JS como librerías, promises y asincronía para controlar eventos en la interfaz y producir animaciones en respuesta.
@@ -95,3 +95,7 @@ Cada criterio puede tener el aspecto alcanzado de:
 * Nulo 0pt
 
 Se aprueba con 7, si se llega a sacar menos de 7, tienen una chance de re-entrega, tiempo dado por la plataforma y como nota máxima la corrección llegan a 7.
+
+## Periodos
+* Entregar: 10 días de corrido.
+* Corrección: 20 días corridos.

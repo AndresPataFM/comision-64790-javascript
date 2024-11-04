@@ -17,7 +17,7 @@ const pedidos = JSON.parse(localStorage.getItem("pedidos")) || []
 const agregarProducto = ({name, id, type, price, stock, description})=>{
     //Destuctura un objeto para recibir los datos
     if(productos.some(prod=>prod.id===id)){
-        // console.warn("Ya existe un producto con ese id") // esto lo podemos ahcer a futuro con lirberias
+        // console.warn("Ya existe un producto con ese id") // esto lo podemos hacer a futuro con lirberias
     } else {
         const productoNuevo = new Producto(name, id, type, price, stock, description)
         productos.push(productoNuevo)
